@@ -1,0 +1,47 @@
+# jaffle_shop:
+#   target: dev
+#   outputs:
+#     dev:
+#       type: clickhouse
+#       user:
+#       password:
+#       port: 8123
+#       host: localhost
+#       retries: 1
+#       verify: False
+#       secure: True
+#       connect_timeout: 10
+#       send_receive_timeout: 300
+#       sync_request_timeout: 5
+#       compression: False
+#       compress_block_size: 1048576
+#       check_exchange: True
+#       use_lw_deletes: False
+
+# jaffle_shop:
+#   target: dev
+#   outputs:
+#     dev:
+#       type: clickhouse
+#       user: 
+#       password: 
+#       host: localhost
+#       port: 8123
+#       database: alamp
+#       # schema: wizard
+#       threads: 4
+
+# ~/.dbt/profiles.yml
+
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      host: localhost
+      user: ''
+      password: '' 
+      # dbname: your_db_name
+      schema: alamp
+      port: 8123
+      threads: 4 # 适当设置线程数
